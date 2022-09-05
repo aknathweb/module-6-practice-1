@@ -22,23 +22,51 @@
     <!-- header section start -->
     <header class="container">
         <!-- navbar start -->
-        <nav class="navbar bg-light py-3">
-            <div class="container">
-                <a class="navbar-brand px-2" href="#"><strong
-                        class="bg-primary text-light fs-3 mx-2 py-1 px-2">Exclusive </strong>
-                    <strong>News
-                        Archive</strong> </a>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="index.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="blog.html">Blog</a>
-                    </li>
-                </ul>
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+              <h1 class="navbar-brand fs-2 fw-bold">Exclusive <strong class="text-primary fs-1 fw-bolder">News</strong></h1>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="button">Search</button>
+              </form>
+            </div>
         </nav>
-        <hr>
-        <!-- navbaar end -->
+         <!-- navbaar end -->
+         <!-- Categories start   -->
+         <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+         <!-- Categories end   -->
+          <hr>
+
+        <div class="d-block d-md-flex justify-content-between container-fluid">
+            <div class="my-3 d-md-flex d-block my-auto">
+                <h5 class="me-2">current date</h5>
+                <input class="me-2" type="date" placeholder="Search">
+            </div>
+            <div class="dropdown my-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Default
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Everything</a></li>
+                  <li><a class="dropdown-item" href="#">Top Headlines</a></li>
+                </ul>
+              </div>
+           </div>
+        </div>
+       
 
     </header>
     <!-- header section end -->
