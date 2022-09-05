@@ -17,19 +17,41 @@ const news_data=async()=>{
 news_data();
 // crate blogs dynamicaly start
 
+//current date start
+
+const date=new Date();
+const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
+//padStart for fix the length and fill with number
+// but must be string perform value
+// document.getElementById('current_date').innerText=`${year}-${month.toString().padStart(2,0)}-${day.toString().padStart(2,0)}`;
+document.getElementById('select_date').value=`${year}-${(month+1).toString().padStart(2,0)}-${day.toString().padStart(2,0)}`;
+
+// document.getElementById('search').addEventListener('click',()=>{
+//     console.log(document.getElementById('select_date').value)
+// })
+
+//current date end
+
 const blog_section = document.getElementById('blogs');
 function articles_show(articles)
 {
     console.log(articles);
 articles.forEach(item => {
 const blog = document.createElement("div");
-blog.classList.add("my-2", "p-3", "bg-white", "shedow-lg", "rounded")
+blog.classList.add("my-3", "p-2", "bg-white", "shedow-lg", "rounded","border-secondary")
 blog.innerHTML = `
-            <h1>${item.title}</h1>
-            <small>_<strong>${item.author}</strong></small>
-            <br>
-            <small>${item.publishedAt}</small>
-            <p class="my-3">${item.description}</p>
+<div class="row">
+  <div class="my-2 px-4 col-12 col-md-8">
+    <h2>${item.title}</h2>
+    <p class="my-2">${item.description}</p>
+    <small><strong>${item.author}</strong></small>
+    <br>
+    <small>${item.publishedAt}</small>
+  </div>
+  <div class="col-12 col-md-4 m-auto">
+    <img src=${item.urlToImage} class="img-fluid rounded" alt="">
+  </div>
+</div> 
             `;
 blog_section.appendChild(blog);
 });

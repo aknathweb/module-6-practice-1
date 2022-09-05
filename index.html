@@ -27,43 +27,67 @@
               <h1 class="navbar-brand fs-2 fw-bold">Exclusive <strong class="text-primary fs-1 fw-bolder">News</strong></h1>
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="button">Search</button>
+                <button class="btn btn-outline-success" type="button" id="search">Search</button>
               </form>
             </div>
         </nav>
          <!-- navbaar end -->
          <!-- Categories start   -->
-         <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
+         <ul class="nav justify-content-around">
+            <li class="fs-4 fw-bold nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Business</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li class="fw-bolder fs-4 nav-item">
+              <a class="nav-link" href="#">Entertainment</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li class="fw-bolder fs-4 nav-item">
+              <a class="nav-link" href="#">General</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+            <li class="fw-bolder fs-4 nav-item">
+              <a class="nav-link" href="#">Health</a>
+            </li>
+            <li class="fw-bolder fs-4 nav-item">
+              <a class="nav-link" href="#">Science</a>
+            </li>
+            <li class="fw-bolder fs-4 nav-item">
+              <a class="nav-link" href="#">Sports</a>
+            </li>
+            <li class="fw-bolder fs-4 nav-item">
+              <a class="nav-link" href="#">Technology</a>
+            </li>
+            <li class="fw-bolder fs-4 nav-item">
+              <a class="nav-link" href="#">All</a>
             </li>
           </ul>
          <!-- Categories end   -->
-          <hr>
+          <hr class="border border-dark border-2 opacity-75">
 
         <div class="d-block d-md-flex justify-content-between container-fluid">
             <div class="my-3 d-md-flex d-block my-auto">
-                <h5 class="me-2">current date</h5>
-                <input class="me-2" type="date" placeholder="Search">
+                <h5 class="me-2" id="current_date">Set Date:</h5>
+                <input class="me-2" id="select_date" value="2022-09-15" type="date" >
             </div>
-            <div class="dropdown my-3">
+          <div class="d-flex">
+            <div class="dropdown my-3 me-2">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Default
+                 Eveerything
                 </button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Everything</a></li>
                   <li><a class="dropdown-item" href="#">Top Headlines</a></li>
                 </ul>
+            </div>
+            <div class="dropdown my-3">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                popularity
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">popularity</a></li>
+                  <li><a class="dropdown-item" href="#">relevancy</a></li>
+                  <li><a class="dropdown-item" href="#">publishedAt</a></li>
+                </ul>
               </div>
+          </div>
            </div>
         </div>
        
@@ -75,6 +99,7 @@
     <main class="my-5">
         <!-- blog section start  -->
         <section class="container" id="blogs">
+            
         </section>
         <!-- blog section end -->
     </main>
